@@ -1,0 +1,13 @@
+<%= form_for @article do |f| %>
+  <%= f.error_messages %>
+  <div id="form_new">
+    <h1><%= t ".new_article" %></h1>
+    <p><strong><%= f.label :title %></strong></p>
+    <p><%= f.text_field :name, placeholder: t(".holder"), id: "form_title" %></p>
+
+    <p><strong><%= f.label :content %></strong></p>
+    <p><%= f.cktext_area :content, rows: Settings.articles.form.cktext %></p>
+
+    <p><%= f.submit %></p>
+  </div>
+<% end %>
