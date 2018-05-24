@@ -3,6 +3,9 @@ en:
     application:
       title: "Mai's Blog"
       author: "Development by MTG"
+      sign_in_github: "Sign in with GitHub"
+      signout: "Sign Out"
+      welcome: "Welcome"
   articles:
     create:
       created: "Successfully created article."
@@ -27,6 +30,8 @@ en:
     form: 
       holder: " Enter an article title..."
       new_article: "New Article"
-      
+  sessions:
+    destroy:
+      signed_out: "Signed Out!"
 
 
