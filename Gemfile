@@ -6,6 +6,7 @@ ruby '2.4.2'
 gem 'ckeditor', '~> 4.2'
 gem 'config'
 gem 'jbuilder', '~> 2.5'
+gem 'omniauth-github'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails'
@@ -19,7 +20,7 @@ gem 'will_paginate'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+	gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -32,6 +33,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'pg', '0.20.0'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
