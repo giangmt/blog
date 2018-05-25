@@ -11,14 +11,6 @@
 
   <body>
     <div id="container">
-      <div id="user_nav">
-        <% if current_user %>
-          <h4><%= t ".welcome" %>, <%= current_user.name %> | 
-          <%= link_to t(".signout"), signout_path, method: :delete %></h4>
-        <% else %>
-          <%= link_to t(".sign_in_github"), "/auth/github" %>
-        <% end %>
-      </div>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
